@@ -6,72 +6,189 @@
   <title>Portfolio de Juan Diego Díaz</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f9f9f9;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
       color: #333;
+      scroll-behavior: smooth;
     }
-    h1, h2 {
-      color: #2c3e50;
+
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #007acc;
+    }
+
     a {
       color: #007acc;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .seccion {
-      margin-bottom: 30px;
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f0f2f5;
+      color: #555;
     }
-    ul {
-      padding-left: 20px;
+
+    .cv-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    li {
-      margin-bottom: 10px;
+
+    .cv-button:hover {
+      background-color: #005a99;
     }
   </style>
 </head>
 <body>
 
-  <h1>¡Hola! Soy Juan Diego Díaz</h1>
-  <p>Soy ingeniero con experiencia en Machine Learning, optimización, visión por computador e inteligencia artificial. Aquí tienes una selección de mis proyectos en GitHub.</p>
+  <header>
+    <img src="foto.jpg" alt="Foto de Juan Diego Díaz">
+    <h1>Juan Diego Díaz</h1>
+    <p>Ingeniero en IA · Machine Learning · Optimización · Visión Computacional</p>
+  </header>
 
-  <div class="seccion">
-    <h2>Proyectos destacados</h2>
-    <ul>
-      <li><a href="https://github.com/juandidiaz/Prediccion-de-Hipertension-con-Machine-Learning" target="_blank">Predicción de Hipertensión con Machine Learning</a></li>
-      <li><a href="https://github.com/juandidiaz/FacturaNLP" target="_blank">FacturaNLP</a>: Extracción automatizada de datos clave en facturas PDF usando spaCy y la API de OpenAI.</li>
-      <li><a href="https://github.com/juandidiaz/Algoritmos-Geneticos-para-optimizacion-del-beneficio-en-una-planta-solar" target="_blank">Optimización con Algoritmos Genéticos en planta solar</a></li>
-      <li><a href="https://github.com/juandidiaz/Resolvedor-del-Cubo-de-Rubik-2x2-en-Haskell" target="_blank">Resolvedor del Cubo de Rubik 2x2 en Haskell</a></li>
-      <li><a href="https://github.com/juandidiaz/Reconocedores-y-clasificadores" target="_blank">Reconocedores y Clasificadores (MATLAB)</a></li>
-      <li><a href="https://github.com/juandidiaz/PSO-para-optimos-en-Funcion-de-Rastrigin-y-Funcion-de-Rosenbrock" target="_blank">PSO para óptimos (Rastrigin y Rosenbrock)</a></li>
-      <li><a href="https://github.com/juandidiaz/Algoritmos-de-busqueda" target="_blank">Algoritmos de Búsqueda: Enfriamiento Simulado y Tabú</a></li>
-      <li><a href="https://github.com/juandidiaz/TORCS" target="_blank">Controlador TORCS con Q-Learning</a></li>
-      <li><a href="https://github.com/juandidiaz/Algoritmo-de-Hormigas-para-TSP" target="_blank">Algoritmo de Hormigas para TSP</a></li>
-      <li><a href="https://github.com/juandidiaz/Algoritmo-AQ-" target="_blank">Algoritmo AQ</a></li>
-      <li><a href="https://github.com/juandidiaz/Candidate-Elimination-Algorithm" target="_blank">Candidate Elimination Algorithm</a></li>
-      <li><a href="https://github.com/juandidiaz/Pacman-with-A--algorithm-implemented-in-the-ghost" target="_blank">Pacman con A* en Unity</a></li>
-      <li><a href="https://github.com/juandidiaz/Divide-y-Venceras-Algoritmo-Voraz" target="_blank">Divide y Vencerás + Dijkstra</a></li>
-      <li><a href="https://github.com/juandidiaz/Automatas-Finitos-Determinista-y-No-Determinista-" target="_blank">Autómatas Finito Determinista y No Determinista</a></li>
-      <li><a href="https://github.com/juandidiaz/Perceptron-simple" target="_blank">Perceptrón Simple</a></li>
-      <li><a href="https://github.com/juandidiaz/Funciones-Haskell" target="_blank">Funciones en Haskell</a></li>
-      <li><a href="https://github.com/juandidiaz/Descenso-por-gradiente-Descenso-por-gradiente-estocastico" target="_blank">Descenso por Gradiente (Estocástico y clásico)</a></li>
-      <li><a href="https://github.com/juandidiaz/Strips_Algorithm" target="_blank">Strips Algorithm</a></li>
-      <li><a href="https://github.com/juandidiaz/Prolog" target="_blank">Proyectos en Prolog</a></li>
-    </ul>
-  </div>
+  <main>
 
-  <div class="seccion">
-    <h2>Contacto</h2>
-    <p>Email: juandiego01.jddd@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/juan-diego-diaz-dominguez-52480b209/" target="_blank">https://www.linkedin.com/in/juan-diego-diaz-dominguez-52480b209/</a></p>
-    <p>GitHub: <a href="https://github.com/juandidiaz" target="_blank">github.com/juandidiaz</a></p>
-  </div>
+    <section class="section fade-in">
+      <h2>Sobre mí</h2>
+      <p>Soy ingeniero con experiencia en inteligencia artificial, optimización, visión por computador y desarrollo de software. Me apasiona resolver problemas complejos aplicando soluciones creativas con IA.</p>
+    </section>
 
-  <div class="seccion">
-<p><a href="cv.pdf" download>Descargar mi CV</a></p>
-  </div>
+    <section class="section fade-in">
+      <h2>Proyectos destacados</h2>
+      <div class="projects">
+        <div class="card">
+          <h3><a href="https://github.com/juandidiaz/Prediccion-de-Hipertension-con-Machine-Learning" target="_blank">Predicción de Hipertensión</a></h3>
+          <p>Clasificador de riesgo de hipertensión usando modelos ML interpretables.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/juandidiaz/FacturaNLP" target="_blank">FacturaNLP</a></h3>
+          <p>Extracción de datos clave en facturas PDF con spaCy y OpenAI API.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/juandidiaz/Algoritmos-Geneticos-para-optimizacion-del-beneficio-en-una-planta-solar" target="_blank">Optimización en Planta Solar</a></h3>
+          <p>Algoritmos genéticos para maximizar el beneficio energético.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/juandidiaz/Resolvedor-del-Cubo-de-Rubik-2x2-en-Haskell" target="_blank">Cubo Rubik 2x2</a></h3>
+          <p>Resolvedor en Haskell para cubos 2x2 con ejemplos incluidos.</p>
+        </div>
+
+        <!-- Añade más proyectos aquí siguiendo el mismo formato -->
+      </div>
+    </section>
+
+    <section class="section fade-in">
+      <h2>Contacto</h2>
+      <p>Email: juandiego01.jddd@gmail.com</p>
+      <p><a href="https://www.linkedin.com/in/juan-diego-diaz-dominguez-52480b209/" target="_blank">LinkedIn</a> | <a href="https://github.com/juandidiaz" target="_blank">GitHub</a></p>
+      <a class="cv-button" href="cv.pdf" download>Descargar mi CV</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Juan Diego Díaz · Portfolio personal</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 
 </body>
 </html>
